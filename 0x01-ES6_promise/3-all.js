@@ -10,8 +10,6 @@ export default function handleProfileSignup() {
   //   .catch(() => console.error('Signup system offline'));
 
   return Promise.all([uploadPhoto(), createUser()])
-    .then(([photo, user]) => {
-      return console.log(photo.body, user.firstName, user.lastName);
-    })
+    .then(([photo, user]) => console.log(photo.body, user.firstName, user.lastName))
     .catch(() => console.error('Signup system offline'));
 }
