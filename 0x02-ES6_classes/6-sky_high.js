@@ -10,8 +10,8 @@ class SkyHighBuilding extends Building {
     return this._floors;
   }
 
-  get sqft() {
-    return this._sqft;
+  set floor(value) {
+    this._floors = value;
   }
 
   evacuationWarningMessage() {
